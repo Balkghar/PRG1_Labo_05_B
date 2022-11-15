@@ -22,22 +22,3 @@
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
-
-
-void afficherVector(const vector<bool>& vecteur, const int COLONNE){
-   const int ESPACE = 2;
-   int j = 1;
-   for(bool i : vecteur){
-      if( i ){
-         cout << setw(ESPACE) << "X";
-      } else {
-         cout << setw(ESPACE) << "O";
-      }
-      if(i%COLONNE == 0){
-         j = 1;
-      }
-      else {
-         j++;
-      }
-   }
-}

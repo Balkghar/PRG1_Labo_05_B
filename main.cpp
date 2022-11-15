@@ -18,25 +18,44 @@
 #include <limits>       // numeric_limits<streamsize>
 #include <vector>
 
-#include "annexe.hpp"
 #include "eratosthene.hpp"
+#include "annexe.hpp"
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
 
 int main() {
+
+
    const int MIN_INT = 2;
    const int MAX_INT = 100;
    const string MESSAGE_SAISIE = "Veullez entrez un nombre entrez " + to_string(MIN_INT) + " et " + to_string(MAX_INT) + " : ";
    const string MESSAGE_SAISIE_ERREUR = "Une erreur est intervenue, veuillez resaisir le nombre !";
 
-   vector<bool>& vecteur(100, false);
-
-
    int saisie;
 
+
+
    saisie = saisirIntervaleInt(MIN_INT,MAX_INT, MESSAGE_SAISIE, MESSAGE_SAISIE_ERREUR);
-   
+
+
+   vector<bool> test(saisie,false);
+   int j = 1;
+   for(int i : test){
+      if( i ){
+         cout << setw(2) << "X";
+      } else {
+         cout << setw(2) << "O";
+      }
+      if(j%10==0){
+         j=0;
+         cout << endl;
+      }
+      j++;
+   }
+   cout << endl;
+
+
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès

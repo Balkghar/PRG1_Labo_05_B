@@ -17,6 +17,5 @@
 #ifndef eratosthene
 
    #define eratosthene
-   void afficherVector(const vector<bool>& vecteur, const int COLONNE);
 
 #endif
