@@ -1,6 +1,6 @@
 //---------------------------------------------------------
 // Fichier      : main.cpp
-// Auteur       : Hugo Germano
+// Auteur       : Hugo Germano / Stefano Bianchet
 // Date         : 15.11.2022
 
 // But          :  
