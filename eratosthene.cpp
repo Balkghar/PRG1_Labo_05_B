@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : main.cpp
+// Fichier      : eratosthene.cpp
 // Auteur       : Hugo Germano
-// Date         : dd.MM.yyyy
+// Date         : 15.11.2022
 
-// But          : Exercice 
+// But          :  
 //
 // Remarque     : 
 //
@@ -17,18 +17,7 @@
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
 
+#include "eratosthene.hpp"
+
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
-
-int main() {
-
-   //déclaration des constantes
-   const int DECIMALES = 2;
-
-
-   cout << fixed << setprecision(DECIMALES);
-   
-   cout << "Entrez ENTER pour quitter.";
-   VIDER_BUFFER;
-   return EXIT_SUCCESS;                                  //retourne un code de succès
-}
