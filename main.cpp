@@ -16,6 +16,7 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
+#include <vector>
 
 #include "annexe.hpp"
 #include "eratosthene.hpp"
@@ -28,6 +29,8 @@ int main() {
    const int MAX_INT = 100;
    const string MESSAGE_SAISIE = "Veullez entrez un nombre entrez " + to_string(MIN_INT) + " et " + to_string(MAX_INT) + " : ";
    const string MESSAGE_SAISIE_ERREUR = "Une erreur est intervenue, veuillez resaisir le nombre !";
+
+   vector<bool>& vecteur(100, false);
 
 
    int saisie;

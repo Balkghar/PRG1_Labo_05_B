@@ -12,10 +12,11 @@
 // Compilateur  : gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 //---------------------------------------------------------
 #include <iostream>         //string
+#include <vector>
 
 #ifndef eratosthene
 
    #define eratosthene
-   
+   void afficherVector(const vector<bool>& vecteur, const int COLONNE);
 
 #endif
