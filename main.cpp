@@ -16,6 +16,7 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
+#include <vector>
 
 #include "annexe.hpp"
 #include "eratosthene.hpp"
@@ -24,9 +25,26 @@
 using namespace std;
 
 int main() {
+
+    int nbreValeurs;
+    vector<int> vNbrePremiers;
+    vector<bool> vCrible;
+
+    cout << "Entrez un nombre de valeurs [2-200] :";
+    cin  >> nbreValeurs;
+    VIDER_BUFFER;
+
+    vCrible = initialiserCrible(nbreValeurs);
+
+    vNbrePremiers = sortirNbrePremiers(vCrible);
+
+    for (int i : vNbrePremiers) {
+        cout << i << " ";
+    }
+
+    cout << endl;
    
-   
-   cout << "Entrez ENTER pour quitter.";
-   VIDER_BUFFER;
-   return EXIT_SUCCESS;                                  //retourne un code de succès
+    cout << "Entrez ENTER pour quitter.";
+    VIDER_BUFFER;
+    return EXIT_SUCCESS;                                  //retourne un code de succès
 }
