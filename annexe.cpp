@@ -25,11 +25,12 @@ using namespace std;
 // Nom         saisie
 // But         demande la saisie à l'utilisateur jusqu'à qu'elle soit correct et la retourne
 //             
-// Param       maxInt  le maximum autorisé
-// Param       minInt  le minimum autorisé
-// Param       message message d'invitation de saisie
+// Param       MIN_INT           : le maximum autorisé
+// Param       MAX_INT           : le minimum autorisé
+// Param       MESSAGE           : message d'invitation de saisie
+// Param       MESSAGE_ERREUR    : message d'erreur de saisie
 // Exception   n/a
-int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE, const string& MESSAGE_ERREUR){
+int saisirIntervaleInt(const int MIN_INT, const int MAX_INT, const string& MESSAGE, const string& MESSAGE_ERREUR){
    int saisie;
    bool erreur;
 
@@ -42,7 +43,7 @@ int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE
       // erreur = not(cin >> saisie) or saisie < MIN or saisie > MAX;
 
       // vérification
-      erreur = cin.fail() or saisie < MININT or saisie > MAXINT;
+      erreur = cin.fail() or saisie < MIN_INT or saisie > MAX_INT;
       if (erreur) {
          cout << MESSAGE_ERREUR << endl;
          cin.clear();
@@ -53,22 +54,4 @@ int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE
 
    } while(erreur);
    return saisie;
-}
-
-// Nom         saisie
-// But         demande de saisie pour l'utilisateur jusqu'à qu'elle soit correct, retourne un booléun selon l'entrée de l'utilisateur
-//             
-// Param       oui  le char oui
-// Param       non  le char non
-// Param       message  message d'invitation de saisie
-// Exception   n/a
-bool continuer(char oui, char non, const string& message){
-      char continuer;
-      do{
-            cout <<   message;
-            cin  >> continuer;
-            VIDER_BUFFER;
-      }while(continuer != oui and continuer != non);
-
-   if(continuer == oui){return true;}else{return false;}
 }

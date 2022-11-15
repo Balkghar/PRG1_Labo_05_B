@@ -24,7 +24,15 @@
 using namespace std;
 
 int main() {
-   
+   const int MIN_INT = 2;
+   const int MAX_INT = 100;
+   const string MESSAGE_SAISIE = "Veullez entrez un nombre entrez " + to_string(MIN_INT) + " et " + to_string(MAX_INT) + " : ";
+   const string MESSAGE_SAISIE_ERREUR = "Une erreur est intervenue, veuillez resaisir le nombre !";
+
+
+   int saisie;
+
+   saisie = saisirIntervaleInt(MIN_INT,MAX_INT, MESSAGE_SAISIE, MESSAGE_SAISIE_ERREUR);
    
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
