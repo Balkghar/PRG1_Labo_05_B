@@ -14,8 +14,16 @@
 #include <iostream>         //string
 #include <vector>
 
+using namespace std;
+
 #ifndef eratosthene
 
    #define eratosthene
+
+
+    vector<bool> initialiserCrible(int nbreValeurs);
+    vector<int> sortirNbrePremiers(vector<bool>& vCrible);
+   
+
 
 #endif
