@@ -16,8 +16,10 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
+#include <vector>
 
 #include "eratosthene.hpp"
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
+

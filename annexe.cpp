@@ -3,7 +3,7 @@
 // Auteur       : Hugo Germano
 // Date         : 15.11.2022
 
-// But          :  
+// But          :  fonction annexe servant à la saisie et l'affichage utilisateur
 //
 // Remarque     : 
 //
@@ -16,35 +16,33 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
-
+#include <vector>
 #include "annexe.hpp"
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
 
-// Nom         saisie
+// Nom         saisirIntervaleInt
 // But         demande la saisie à l'utilisateur jusqu'à qu'elle soit correct et la retourne
 //             
-// Param       maxInt  le maximum autorisé
-// Param       minInt  le minimum autorisé
-// Param       message message d'invitation de saisie
+// Param       minInt           : le maximum autorisé
+// Param       maxInt           : le minimum autorisé
+// Param       message           : message d'invitation de saisie
+// Param       message_erreur    : message d'erreur de saisie
 // Exception   n/a
-int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE, const string& MESSAGE_ERREUR){
+int saisirIntervaleInt(int minInt, int maxInt, const string& message, const string& message_erreur){
    int saisie;
    bool erreur;
 
    do {
+
       // message et saisie
-      cout << MESSAGE;
+      cout << message;
       cin >> saisie;
 
-      // saisie et vérification en même temps
-      // erreur = not(cin >> saisie) or saisie < MIN or saisie > MAX;
-
-      // vérification
-      erreur = cin.fail() or saisie < MININT or saisie > MAXINT;
-      if (erreur) {
-         cout << MESSAGE_ERREUR << endl;
+      erreur = cin.fail() or saisie < minInt or saisie > maxInt;
+      if ( erreur ) {
+         cout << message_erreur << endl;
          cin.clear();
       }
 
@@ -54,21 +52,22 @@ int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE
    } while(erreur);
    return saisie;
 }
-
-// Nom         saisie
-// But         demande de saisie pour l'utilisateur jusqu'à qu'elle soit correct, retourne un booléun selon l'entrée de l'utilisateur
+// Nom         afficherVectorCondition
+// But         affiche un vecteur au sein d'un axe x/y selon les conditions donnés par l'utilisateur
 //             
-// Param       oui  le char oui
-// Param       non  le char non
-// Param       message  message d'invitation de saisie
+// Param       colonne  : le nombre de colonne
+// Param       choix    : tableau de bool, va décidier quel caractères à afficher
+// Param       caract   : le vecteur de caractères à afficher
 // Exception   n/a
-bool continuer(char oui, char non, const string& message){
-      char continuer;
-      do{
-            cout <<   message;
-            cin  >> continuer;
-            VIDER_BUFFER;
-      }while(continuer != oui and continuer != non);
+void afficherVectorCondition( int colonne, const vector<bool>& choix, const vector<char>& caract){
 
-   if(continuer == oui){return true;}else{return false;}
+   for( int i = 0 ; i < choix.size() ; ++i ) {
+      cout << setw(2) << caract.at(choix.at(i));
+      //si ça arrive à la fin de la colonne, retour à la ligne
+      if( ( i+1 ) % colonne ==0 ) {
+         cout << endl;
+      }
+   }
+   cout << endl;
+   
 }
