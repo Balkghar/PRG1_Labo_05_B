@@ -13,12 +13,14 @@
 //---------------------------------------------------------
 
 #include <iomanip>
+#include <limits>       // numeric_limits<streamsize>
 #include <vector>
 
 #include "eratosthene.hpp"
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
+
 
 /**
  * @brief Fonction créant un vecteur crible à l'aide d'un nbre de valeurs donné
@@ -65,3 +67,4 @@ vector<int> sortirNbrePremiers(vector<bool>& vCrible){
 
     return vNbrePremiers;
 }
+
