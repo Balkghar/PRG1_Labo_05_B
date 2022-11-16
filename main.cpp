@@ -39,21 +39,9 @@ int main() {
    saisie = saisirIntervaleInt(MIN_INT,MAX_INT, MESSAGE_SAISIE, MESSAGE_SAISIE_ERREUR);
 
 
-   vector<bool> test(saisie,false);
-   int j = 1;
-   for(int i : test){
-      if( i ){
-         cout << setw(2) << "X";
-      } else {
-         cout << setw(2) << "O";
-      }
-      if(j%10==0){
-         j=0;
-         cout << endl;
-      }
-      j++;
-   }
-   cout << endl;
+   vector<bool> test(saisie,true);
+
+   afficherVectorBoolChar('O', 'X', test);
 
 
    cout << "Entrez ENTER pour quitter.";
