@@ -23,7 +23,7 @@
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
 
-void afficherVectorBoolChar(const char VRAI, const char FAUX, const vector<bool>& vect){
+void afficherVectorBoolChar(const char VRAI, const char FAUX,const int COLONNE, const vector<bool>& vect){
    int j = 1;
    for(bool i : vect){
       if( i ){
@@ -31,7 +31,7 @@ void afficherVectorBoolChar(const char VRAI, const char FAUX, const vector<bool>
       } else {
          cout << setw(2) << FAUX;
       }
-      if(j%10==0){
+      if(j%COLONNE==0){
          j=0;
          cout << endl;
       }

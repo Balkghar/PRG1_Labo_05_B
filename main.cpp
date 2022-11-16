@@ -41,7 +41,7 @@ int main() {
 
    vector<bool> test(saisie,true);
 
-   afficherVectorBoolChar('O', 'X', test);
+   afficherVectorBoolChar('O', 'X',10, test);
 
 
    cout << "Entrez ENTER pour quitter.";
