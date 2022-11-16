@@ -38,6 +38,7 @@ int main() {
 
     vNbrePremiers = sortirNbrePremiers(vCrible);
 
+
     for (int i : vNbrePremiers) {
         cout << i << " ";
     }
