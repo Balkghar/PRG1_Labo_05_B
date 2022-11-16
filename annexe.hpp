@@ -12,11 +12,13 @@
 // Compilateur  : gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 //---------------------------------------------------------
 #include <iostream>         //string
+#include <vector>
 using namespace std;
 
 #ifndef annexe
 
    #define annexe
-   int saisirIntervaleInt(const int MININT, const int MAXINT, const string& MESSAGE, const string& MESSAGE_ERREUR);
+   int saisirIntervaleInt(int minInt, int maxInt, const string& message, const string& message_erreur);
+   void afficherVectorCondition(int colonne, const vector<bool>& choix, const vector<char>& caract);
 
 #endif
