@@ -17,6 +17,6 @@
 #ifndef eratosthene
 
    #define eratosthene
-   void afficherVectorBoolChar(const char VRAI, const char FAUX, std::vector<bool>& vect);
+   void afficherVectorBoolChar(const char VRAI, const char FAUX, const std::vector<bool>& vect);
 
 #endif
