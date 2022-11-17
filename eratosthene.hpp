@@ -19,11 +19,8 @@ using namespace std;
 #ifndef eratosthene
 
    #define eratosthene
-
-
-    vector<bool> initialiserCrible(int nbreValeurs);
-    vector<int> sortirNbrePremiers(vector<bool>& vCrible);
-   
+    void sortirNbrePremiers(vector<bool>& vCrible);
+    vector<int>& creerVNbrPremier(const vector<bool>& vCrible);
 
 
 #endif

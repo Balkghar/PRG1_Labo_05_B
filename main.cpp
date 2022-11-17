@@ -35,15 +35,14 @@ int main() {
    const int ESPACE  = 3;
    const vector<char> CHAR_A_AFFICHER = {'O', 'X'};
 
-   int saisie;
-   vector<int> vNbrePremiers;
-   vector<bool> vCrible;
 
-   saisie = saisirIntervaleInt(MIN_INT,MAX_INT, MESSAGE_SAISIE, MESSAGE_SAISIE_ERREUR);
+   const int saisie = saisirIntervaleInt(MIN_INT,MAX_INT, MESSAGE_SAISIE, MESSAGE_SAISIE_ERREUR);
 
-   vCrible = initialiserCrible(saisie);
+   vector<bool> vCrible(saisie,true);
 
-   vNbrePremiers = sortirNbrePremiers(vCrible);
+   sortirNbrePremiers(vCrible);
+
+   const vector<int> vNbrePremiers = creerVNbrPremier(vCrible);
   
    cout << "Criblage du tableau : " << endl;
    afficherVectorCondition(vCrible, CHAR_A_AFFICHER, COLONNE, ESPACE);

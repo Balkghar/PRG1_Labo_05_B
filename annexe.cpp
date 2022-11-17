@@ -61,10 +61,10 @@ int saisirIntervaleInt(int minInt, int maxInt, const string& message, const stri
 // Exception   n/a
 void afficherVectorCondition(const vector<bool>& choix, const vector<char>& caract, int colonne, int espace){
 
-   for( int i = 0 ; i < choix.size() ; ++i ) {
+   for( size_t i = 0 ; i < choix.size() ; ++i ) {
       cout << setw(espace) << caract.at(choix.at(i));
       //si ça arrive à la fin de la colonne, retour à la ligne
-      if( ( i+1 ) % colonne ==0 ) {
+      if( ( i+1 ) % colonne == 0 ) {
          cout << endl;
       }
    }
@@ -72,10 +72,10 @@ void afficherVectorCondition(const vector<bool>& choix, const vector<char>& cara
 }
 
 void afficherValeurVecteurInt(const vector<int>& vect, int colonne, int espace){
-   for( int i = 0 ; i < vect.size() ; ++i ) {
+   for( size_t i = 0 ; i < vect.size() ; ++i ) {
       cout << setw(espace) << vect.at(i);
       //si ça arrive à la fin de la colonne, retour à la ligne
-      if( ( i+1 ) % colonne ==0 ) {
+      if( ( i + 1 ) % colonne == 0 ) {
          cout << endl;
       }
    }
