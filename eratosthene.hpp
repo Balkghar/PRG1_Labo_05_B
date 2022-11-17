@@ -20,7 +20,7 @@ using namespace std;
 
    #define eratosthene
     void sortirNbrePremiers(vector<bool>& vCrible);
-    vector<int>& creerVNbrPremier(const vector<bool>& vCrible);
+    void creerVNbrePremier(const vector<bool>& vCrible, vector<int>& vNbrePremiers);
 
 
 #endif
