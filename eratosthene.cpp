@@ -13,14 +13,11 @@
 //---------------------------------------------------------
 
 #include <iomanip>
-#include <limits>       // numeric_limits<streamsize>
 #include <vector>
 
 #include "eratosthene.hpp"
 
-#define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
-
 
 /**
  * @brief Fonction sortant les nombres premiers à partir d'un vecteur crible
@@ -43,14 +40,19 @@ void sortirNbrePremiers(vector<bool>& vCrible){
         }
     }
 }
-vector<int>& creerVNbrPremier(const vector<bool>& vCrible){
 
-    vector<int> vNbrePremiers;
+/**
+ * @brief Fonction ajoutant au vNbrePremiers les nombres premiers
+ * @param vCrible Vecteur criblé
+ * @param vNbrePremiers Vecteur qui contiendra les nombres premiers
+ */
+void creerVNbrePremier(const vector<bool>& vCrible, vector<int>& vNbrePremiers){
 
     for (size_t i = 1; i < vCrible.size(); ++i) {
         if (vCrible.at(i))
             // i + 1 pour que le nombre corresponde au nombre premier
-            vNbrePremiers.push_back(i + 1);
+            vNbrePremiers.push_back((int)i + 1);
+
     }
-    return vNbrePremiers;
+
 }
