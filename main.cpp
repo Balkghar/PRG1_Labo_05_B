@@ -3,7 +3,7 @@
 // Auteur       : Hugo Germano / Stefano Bianchet
 // Date         : 15.11.2022
 
-// But          :  
+// But          : Fichier principal du Labo 05 de PRG1
 //
 // Remarque     : 
 //

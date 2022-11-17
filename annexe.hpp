@@ -3,7 +3,7 @@
 // Auteur       : Hugo Germano
 // Date         : 15.11.2022
 
-// But          : 
+// But          : header pour annexe.cpp
 //
 // Remarque     : 
 //
