@@ -33,6 +33,7 @@ int main() {
    const string MESSAGE_SAISIE_ERREUR = "Une erreur est intervenue, veuillez resaisir le nombre !";
    
    const int COLONNE = 10;
+   const int ESPACE  = 3;
    const vector<char> CHAR_A_AFFICHER = {'O', 'X'};
 
    int saisie;
@@ -45,11 +46,10 @@ int main() {
 
    vNbrePremiers = sortirNbrePremiers(vCrible);
   
-   afficherVectorCondition(COLONNE, vCrible, CHAR_A_AFFICHER);
-
-   for (int i : vNbrePremiers) {
-       cout << i << " ";
-   }
+   cout << "Criblage du tableau : " << endl;
+   afficherVectorCondition(vCrible, CHAR_A_AFFICHER, COLONNE, ESPACE);
+   cout << "Liste des nombres premiers : " << endl;
+   afficherValeurVecteurInt(vNbrePremiers, COLONNE, ESPACE);
 
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;

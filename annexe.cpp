@@ -55,19 +55,30 @@ int saisirIntervaleInt(int minInt, int maxInt, const string& message, const stri
 // Nom         afficherVectorCondition
 // But         affiche un vecteur au sein d'un axe x/y selon les conditions donnés par l'utilisateur
 //             
-// Param       colonne  : le nombre de colonne
 // Param       choix    : tableau de bool, va décidier quel caractères à afficher
 // Param       caract   : le vecteur de caractères à afficher
+// Param       colonne  : le nombre de colonne
 // Exception   n/a
-void afficherVectorCondition( int colonne, const vector<bool>& choix, const vector<char>& caract){
+void afficherVectorCondition(const vector<bool>& choix, const vector<char>& caract, int colonne, int espace){
 
    for( int i = 0 ; i < choix.size() ; ++i ) {
-      cout << setw(2) << caract.at(choix.at(i));
+      cout << setw(espace) << caract.at(choix.at(i));
       //si ça arrive à la fin de la colonne, retour à la ligne
       if( ( i+1 ) % colonne ==0 ) {
          cout << endl;
       }
    }
    cout << endl;
-   
+}
+
+void afficherValeurVecteurInt(const vector<int>& vect, int colonne, int espace){
+   for( int i = 0 ; i < vect.size() ; ++i ) {
+      cout << setw(espace) << vect.at(i);
+      //si ça arrive à la fin de la colonne, retour à la ligne
+      if( ( i+1 ) % colonne ==0 ) {
+         cout << endl;
+      }
+   }
+   cout << endl;
+
 }
