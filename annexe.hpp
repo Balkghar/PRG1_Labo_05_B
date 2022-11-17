@@ -19,6 +19,7 @@ using namespace std;
 
    #define annexe
    int saisirIntervaleInt(int minInt, int maxInt, const string& message, const string& message_erreur);
-   void afficherVectorCondition(int colonne, const vector<bool>& choix, const vector<char>& caract);
+   void afficherVectorCondition(const vector<bool>& choix, const vector<char>& caract, int colonne, int espace);
+   void afficherValeurVecteurInt(const vector<int>& vect, int colonne, int espace);
 
 #endif
