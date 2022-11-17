@@ -26,7 +26,6 @@ using namespace std;
 
 int main() {
 
-
    const int MIN_INT = 2;
    const int MAX_INT = 100;
    const string MESSAGE_SAISIE = "Veullez entrez un nombre entrez " + to_string(MIN_INT) + " et " + to_string(MAX_INT) + " : ";
@@ -54,4 +53,5 @@ int main() {
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
+   
 }

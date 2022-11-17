@@ -3,7 +3,7 @@
 // Auteur       : Hugo Germano
 // Date         : 15.11.2022
 
-// But          :  fonction annexe servant à la saisie et l'affichage utilisateur
+// But          : fonction annexe servant à la saisie et l'affichage utilisateur
 //
 // Remarque     : 
 //
