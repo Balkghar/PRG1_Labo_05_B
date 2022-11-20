@@ -3,7 +3,7 @@
 // Auteur       : Hugo Germano / Stefano Bianchet
 // Date         : 15.11.2022
 
-// But          :  
+// But          : fonction d'identification des nombres premiers avec la méthode du crible d’Ératosthène
 //
 // Remarque     : 
 //
@@ -19,11 +19,7 @@
 
 using namespace std;
 
-/**
- * @brief Fonction sortant les nombres premiers à partir d'un vecteur crible
- * @param vCrible Vecteur crible
- * @return Vecteur contenant les nombres premiers
- */
+
 void sortirNbrePremiers(vector<bool>& vCrible){
     
     //car 1 non premier
@@ -41,15 +37,10 @@ void sortirNbrePremiers(vector<bool>& vCrible){
     }
 }
 
-/**
- * @brief Fonction ajoutant au vNbrePremiers les nombres premiers
- * @param vCrible Vecteur criblé
- * @param vNbrePremiers Vecteur qui contiendra les nombres premiers
- */
 void creerVNbrePremier(const vector<bool>& vCrible, vector<int>& vNbrePremiers){
 
     for (size_t i = 1; i < vCrible.size(); ++i) {
-        if (vCrible.at(i))
+        if ( vCrible.at(i) )
             // i + 1 pour que le nombre corresponde au nombre premier
             vNbrePremiers.push_back((int)i + 1);
 

@@ -1,6 +1,6 @@
 //---------------------------------------------------------
 // Fichier      : annexe.cpp
-// Auteur       : Hugo Germano
+// Auteur       : Hugo Germano / Stefano Bianchet
 // Date         : 15.11.2022
 
 // But          : fonction annexe servant à la saisie et l'affichage utilisateur
