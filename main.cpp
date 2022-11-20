@@ -45,6 +45,7 @@ int main() {
 
    creerVNbrePremier(vCrible,vNbrePremiers);
   
+   //affichage du tableaux de nombre premier et de nombre premier dans l'intervalle demandé par l'utilisateur
    cout << "Criblage du tableau : " << endl;
    afficherVectorCondition(vCrible, CHAR_A_AFFICHER, COLONNE, ESPACE);
    cout << "Liste des nombres premiers : " << endl;
@@ -52,6 +53,6 @@ int main() {
 
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
+
    return EXIT_SUCCESS;                                  //retourne un code de succès
-   
 }
